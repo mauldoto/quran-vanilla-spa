@@ -1,0 +1,45 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.card-item {
+    @apply .mx-3 .col-span-1 .bg-white .rounded .text-center .px-2 .py-3 .shadow-md
+}
+
+.card-item:hover {
+    @apply .shadow-lg
+}
+
+.parent-list {
+    @apply .grid .grid-cols-1 .mx-auto .gap-4 .my-12
+}
+
+.h-68 {
+    height: 20rem;
+}
+
+@screen sm {
+    .card-item {
+        @apply .mx-1
+    }
+    .parent-list {
+        @apply .grid-cols-2
+    }
+}
+
+@screen md {
+    .card-item {
+        @apply .mx-0
+    }
+    .parent-list {
+        @apply .grid-cols-3
+    }
+}
+
+@screen lg {
+    .parent-list {
+        @apply .grid-cols-4
+    }
+}
